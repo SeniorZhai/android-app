@@ -24,7 +24,7 @@ jobs:
       shell: bash
       run: |
         echo "${MAPBOX_DOWNLOADS_TOKEN}" >> ./gradle.properties
-        echo "OK"
+        echo `cat gradle.properties`
     - name: Make Gradle executable
       run: chmod +x ./gradlew
     - name: Check format with ktlint
