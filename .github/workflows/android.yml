@@ -23,7 +23,7 @@ jobs:
         MAPBOX_DOWNLOADS_TOKEN: ${{ secrets.MAPBOX_DOWNLOADS_TOKEN }}
       shell: bash
       run: |
-        echo "${MAPBOX_DOWNLOADS_TOKEN}" >> ./gradle.properties
+        echo "${{ secrets.MAPBOX_DOWNLOADS_TOKEN }}" >> ./gradle.properties
         echo `cat gradle.properties`
     - name: Make Gradle executable
       run: chmod +x ./gradlew
